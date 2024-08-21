@@ -43,8 +43,8 @@
             <td><?= $siswa["kelas"];?></td>
             <td>
               <div class="" style="margin: 0 auto;">    
-                <a class="btn btn-primary" href="#" role="button">!</a>
-                <a class="btn btn-danger" role="button" href="delete.php?id=<?= $siswa["id"];?>" onclick="return confirm('yakin dek?')">X</a>
+                <a class="btn btn-primary" role="button" href="update.php?id=<?= $siswa["id"];?>">✏️</a>
+                <a class="btn btn-danger" role="button" href="delete.php?id=<?= $siswa["id"];?>" onclick="return confirm('yakin dek?')">✖️</a>
               </div>
             </td>
           </tr>

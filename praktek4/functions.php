@@ -46,10 +46,33 @@
     function delete($id){
         global $conn;
         mysqli_query($conn, "DELETE FROM data_siswa WHERE id = $id");  
+
         return mysqli_affected_rows($conn);
     }
 
+    function update($data){
+        global $conn;
+        global $id_siswa;
 
+        $nama = htmlspecialchars($data["nama"]);
+        $jurusan = htmlspecialchars($data["jurusan"]);
+        $kelas = htmlspecialchars($data["kelas"]);
+        $query = "UPDATE `data_siswa` SET 
+                    `nama` = '$nama', 
+                    `jurusan` = '$jurusan', 
+                    `kelas` = '$kelas' 
+                    WHERE `data_siswa`.`id` = $id_siswa;";
+        // sqlnya agak beda sama yang ada yang divido
+        // yang divedeo malah error
+
+        if (!$query) {
+            die("Query gagal: " . mysqli_error($conn));
+        }
+
+        mysqli_query($conn, $query);
+        return mysqli_affected_rows($conn);
+        
+    }
 
 
 

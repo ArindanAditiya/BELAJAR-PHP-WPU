@@ -22,7 +22,7 @@
     <h1 class="text-center">DATA MAHASISWA</h1>
 
     <div class="container-xl">
-      <table class="table table-striped">
+    <a class="btn btn-primary" href="#" role="button">Link</a>        <table class="table table-striped">
         <thead class="table-dark">
           <tr>
             <th scope="col">#</th>
